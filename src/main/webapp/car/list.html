@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+<link type="text/css" href="/css/smoothness/jquery-ui-1.8.16.custom.css"
+	rel="stylesheet" />
+
+<link type="text/css" href="/css/common.css"
+	rel="stylesheet" />
+		
+<script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="/js/core.js"></script>
+
+
+
+<script>
+	// <![CDATA[ 
+	    $(document).ready(function() {
+		
+		initCarForm();
+		
+	});
+	    
+	// ]]> 
+</script>
+
+</head>
+
+<div class="demo">
+
+	<div id="dialog-form" title="Create a strain">
+		<p class="validateTips">All form fields are required.</p>
+
+		<form class="l:CarOps?form=post">
+			<fieldset>
+				<label for="name">Name</label> 
+				<input type="text" name="name"
+					id="name" class="text ui-widget-content ui-corner-all" /> 
+				<label for="kind">Kind</label> 
+				<input type="text" name="kind" id="kind"
+					value="" class="text ui-widget-content ui-corner-all" /> 
+				<label for="maker">Maker</label> 
+				<input type="text" name="maker"
+					id="maker" value="" class="text ui-widget-content ui-corner-all" />
+			  <label for="description">Description</label>
+				<textarea rows="2" cols="48" id="description"
+					class="text ui-widget-content ui-corner-all"></textarea>
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="cars-container" class="ui-widget">
+		<h1>Cars:</h1>
+		<table id="cars" class="l:CarOps.list ui-widget ui-widget-content">
+			<thead>
+				<tr class="ui-widget-header ">
+					<th>Name</th>
+					<th>Type</th>
+					<th>Maker</th>
+					<th>Description</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="car">
+					<td class="name">Maximum</td>
+					<td class="kind">Sedan</td>
+					<td class="maker">Nissan</td>
+					<td class="description">Good on gas</td>
+					<td>
+					    <a href="#" class="edit iconLink" title="">edit</a>
+					    <span class="delete"/>
+				    </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<span class="l:CarOps.render" id="createCar">Button goes here</span>
+</div>
+</html>
